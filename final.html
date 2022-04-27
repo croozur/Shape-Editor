@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Shape Editor</title>
+<head>
+<script src="fabric.min.js"></script>
+</head>
+
+<body>
+<br><br><br>
+
+<div id="shapes_div">
+
+	<button onclick="addLine()"/>
+		<input type="image" src="Final Images/line.png" />
+		
+	<button onclick="addCurve()"/>
+		<input type="image" src="Final Images/curve.png" />
+		
+	<button onclick="addPolyline()" />
+		<input type="image" src="Final Images/polyline.png" />
+	
+	<button onclick="addRectangle()" />
+		<input type="image" src="Final Images/rectangle.png" />
+		
+	<button onclick="addSquare()" />
+		<input type="image" src="Final Images/square.png" />
+		
+	<button onclick="addPolygon()" />
+		<input type="image" src="Final Images/polygon.png" />
+		
+	<button onclick="addTriangle()" />
+		<input type="image" src="Final Images/triangle.png" />
+	
+	<button onclick="addCircle()"/>
+		<input type="image" src="Final Images/circle.png" />
+		
+	<button onclick="addEllipse()" />
+		<input type="image" src="Final Images/ellipse.png" />
+	
+	<button onclick="addText()" />
+		<input type="image" src="Final Images/text.png" />
+	
+</div>
+
+<br>
+
+<div id="button_div">
+		
+		<br>
+	
+		<b> &nbsp; <span style="font-family:Arial"> Color:</span></b> <input type="color" id="color_picker" value="#ff0000">
+		&nbsp; <b><span style="font-family:Arial"> Border Size:</span></b> <input type="text" id="border_picker" value="0" size="1">
+		<button id="delete" onclick="deleteElement()">Delete</button>
+		<button id="new">New</button> <input type="button" value="Undo" onclick="undo()"><input type="button" value="Clone" onclick="Clone()">
+
+		<button id="download">Save as JPEG</button>
+		<button id="savejson">Save as JSON</button>
+		<button id="help">Help</button>
+
+</div>
+			
+	<div id="input_div">
+	<br>
+	<span style="font-family:Arial">Load Image: </span><input type="file" onchange="load(event)"></div>
+
+	<br>
+	<canvas id="canvas" width="850" height="700" style="border-style: solid;"></canvas>
+
+<script src="final.js"></script>
+
+</html>
